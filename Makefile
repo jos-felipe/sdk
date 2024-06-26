@@ -6,7 +6,7 @@
 #    By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:34:41 by josfelip          #+#    #+#              #
-#    Updated: 2024/06/26 11:30:04 by josfelip         ###   ########.fr        #
+#    Updated: 2024/06/26 13:32:11 by josfelip         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,9 @@ print:
 	@echo "SRC_PATH: ${SRC_PATH}"
 	@echo "OBJ_PATH: ${OBJ_PATH}"
 
-.PHONY: all libft clean fclean re debug print
+valgrind: all
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./${NAME}
+
+.PHONY: all libft clean fclean re debug print valgrind
 
 
