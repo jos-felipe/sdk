@@ -6,7 +6,7 @@
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 11:14:54 by josfelip          #+#    #+#             */
-/*   Updated: 2024/06/26 13:38:55 by josfelip         ###   ########.fr       */
+/*   Updated: 2024/06/26 13:52:20 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_collect_mem(void *content);
-void	ft_free_trashman(t_list **lst_memory);
-t_list	**ft_get_mem_address(void);
+void	ft_free_trashman();
 
 #endif
