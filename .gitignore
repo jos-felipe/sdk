@@ -1,9 +1,12 @@
+# Keep directories
 /*
-!include
-!src
-!lib
 !.github
+!qa
+!include
+!lib
+!src
 
+# Keep files
 !main.c
 !Makefile
 !.gitignore
