@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newproject.h                                       :+:      :+:    :+:   */
+/*   _types.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 16:32:04 by josfelip          #+#    #+#             */
-/*   Updated: 2024/06/26 11:20:30 by josfelip         ###   ########.fr       */
+/*   Created: 2025/01/14 17:24:44 by josfelip          #+#    #+#             */
+/*   Updated: 2025/01/23 15:07:23 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NEWPROJECT_H
-# define NEWPROJECT_H
+#ifndef _TYPES_H
+# define _TYPES_H
 
-# include "../lib/libft/include/libft.h"
+# include "MLX42/MLX42.h"
 
-void	new_function(char *str);
+
 
 #endif
