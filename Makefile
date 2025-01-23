@@ -6,7 +6,7 @@
 #    By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:34:41 by josfelip          #+#    #+#              #
-#    Updated: 2025/01/23 14:58:42 by josfelip         ###   ########.fr        #
+#    Updated: 2025/01/23 15:08:47 by josfelip         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,12 +72,9 @@ SRC	=	$(addprefix $(SRC_DIR)/, $(SRC_MAIN)) \
 # Generate object file paths, maintaining directory structure
 OBJ	=	$(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
-# Chapter header files
-HDR_CH = cub3d_types.h \
-		 ch0_scene_description_file.h \
-		 ch1_window_management.h \
-		 ch2_ray_casting.h \
-		 ch3_textures.h
+# Header files dependencies
+HDR_CH = _types.h \
+		 ch0_.h 
 
 # Combine all headers with their paths
 HDR	= $(addprefix $(INC_DIR)/, $(HDR_CH))
