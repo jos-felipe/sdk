@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josfelip <josfelip@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/31 16:14:30 by josfelip          #+#    #+#             */
-/*   Updated: 2023/07/31 17:08:47 by josfelip         ###   ########.fr       */
+/*   Created: 2023/08/24 13:54:25 by josfelip          #+#    #+#             */
+/*   Updated: 2023/09/01 16:29:10 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	char	*s3;
-	size_t	len;
+# include <unistd.h>
+# include <stdarg.h>
 
-	len = ft_strlen(s1);
-	len += ft_strlen(s2);
-	s3 = (char *)malloc(sizeof(char) * (len + 1));
-	if (!s3)
-		return (NULL);
-	ft_strlcpy(s3, s1, ft_strlen(s1) + 1);
-	ft_strlcat(s3, s2, ft_strlen(s1) + ft_strlen(s2) + 1);
-	return (s3);
-}
+int	ft_printf(const char *str, ...);
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+int	ft_putnbr(int n, int prefix_flag);
+int	ft_putunbr(unsigned int nbr);
+int	ft_puthex(unsigned long int hex, int case_flag, int prefix_flag);
+int	ft_putptr(void *ptr);
+
+#endif

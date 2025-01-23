@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_free_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: josfelip <josfelip@student.42.fr>          +#+  +:+       +#+        */
+/*   By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 10:49:31 by josfelip          #+#    #+#             */
-/*   Updated: 2023/07/25 11:29:38 by josfelip         ###   ########.fr       */
+/*   Created: 2024/11/21 15:27:39 by josfelip          #+#    #+#             */
+/*   Updated: 2024/11/28 11:16:17 by josfelip         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_free_split(char **split)
 {
-	size_t	i;
+	int	i;
 
+	if (!split)
+		return ;
 	i = 0;
-	while (s[i])
+	while (split[i])
+	{
+		free(split[i]);
 		i++;
-	return (i);
+	}
+	free(split);
 }
