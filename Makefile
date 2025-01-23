@@ -6,11 +6,11 @@
 #    By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:34:41 by josfelip          #+#    #+#              #
-#    Updated: 2025/01/14 17:33:33 by josfelip         ###   ########.fr        #
+#    Updated: 2025/01/23 14:58:42 by josfelip         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PROJECT_NAME = cub3D
+PROJECT_NAME = 
 
 # Target executable
 NAME = $(PROJECT_NAME)
