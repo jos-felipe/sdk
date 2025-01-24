@@ -6,11 +6,11 @@
 #    By: josfelip <josfelip@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/20 12:34:41 by josfelip          #+#    #+#              #
-#    Updated: 2025/01/23 15:08:47 by josfelip         ###   ########.fr        #
+#    Updated: 2025/01/24 14:38:39 by josfelip         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PROJECT_NAME = 
+PROJECT_NAME = boilerplate
 
 # Target executable
 NAME = $(PROJECT_NAME)
@@ -38,43 +38,18 @@ endif
 # Source files by component
 SRC_MAIN	=	main.c
 
-SRC_CH0		=	ch0/a0_parse_scene.c \
-				ch0/a1_check_file_extension.c \
-		  		ch0/a2_parse_decorators.c \
-		  		ch0/a3_parse_map.c \
-		  		ch0/a4_validate_map.c \
-				ch0/a9_safe_exit.c \
-				ch0/a5_debug_scene.c \
-
-SRC_CH1		=	ch1/a0_window_management.c \
-				ch1/a1_event_handling.c \
-				ch1/a2_player_init.c \
-				ch1/a3_player_movement.c \
-				ch1/a4_player_utils.c \
-				ch1/a5_demo.c
-
-SRC_CH2		=	ch2/a0_ray_setup.c \
-				ch2/a1_ray_calculations.c \
-				ch2/a2_ray_dda.c \
-				ch2/a3_ray_render.c \
-				ch2/a4_ray_colors.c
-
-SRC_CH3		=	ch3/a0_texture_management.c \
-				ch3/a1_texture_calculations.c
+SRC_CH0		=	ch0/a0_.c \
 
 # Combine all sources with their paths
 SRC	=	$(addprefix $(SRC_DIR)/, $(SRC_MAIN)) \
 		$(addprefix $(SRC_DIR)/, $(SRC_CH0)) \
-		$(addprefix $(SRC_DIR)/, $(SRC_CH1)) \
-		$(addprefix $(SRC_DIR)/, $(SRC_CH2)) \
-		$(addprefix $(SRC_DIR)/, $(SRC_CH3))
 
 # Generate object file paths, maintaining directory structure
 OBJ	=	$(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # Header files dependencies
 HDR_CH = _types.h \
-		 ch0_.h 
+		 ch0_.h \
 
 # Combine all headers with their paths
 HDR	= $(addprefix $(INC_DIR)/, $(HDR_CH))
@@ -129,6 +104,6 @@ debug:
 	@make WITH_DEBUG=TRUE --no-print-directory
 
 leaks: debug
-	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --suppressions=./mlx42.supp ./$(NAME)_debug asset/map/minimalist_map.cub
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --suppressions=./mlx42.supp ./$(NAME)
 
 .PHONY: all clean fclean re debug leaks
